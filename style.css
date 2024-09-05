@@ -1,9 +1,19 @@
 body {
+	padding: 0;
+	margin: 0;
+}
+
+
+.header {
 	background-color: #46465A;
+	color: #FFF;
+	text-align: center;
+	padding: 5%;
+	margin-bottom: 3%;
 }
 
 h1 {
-	color: #FFF;
-	text-align: center;
+	display: contents;
 }
+
 
