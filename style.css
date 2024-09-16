@@ -1,35 +1,62 @@
+html {
+	height: 100%;
+	overflow: hidden;
+}
+
 body {
+	height: 100%;
+	overflow: scroll;
 	padding: 0;
 	margin: 0;
 	font-size: min(4vh, 4vw);
-	text-align: left;
+	background-image: url('bg.webp');
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
 }
 
-.body {
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	padding: 0;
+main {
+	background: rgba(34, 39, 54, 0.5);
 }
 
-.header {
-	background-color: #323746;
+header {
+	background-image: url('bg.webp');
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+
+	position: sticky;
+	top: -3vh;
 	color: #FFF;
 	padding-top: 5vh;
+	padding-bottom: 2vh;
+	padding-left: 7vw;
+	padding-right: 7vw;
+	transition: all 0.3s ease;
+	margin: 0;
+	z-index: 1000;
+    /* backdrop-filter: blur(3px); */
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(34, 39, 54, 0.75);
+    z-index: -1;
+}
+
+.top {
+	background: rgba(34, 39, 54, 0.5);
+	color: #FFF;
+	padding-top: calc(1em - 2vh);
 	padding-bottom: 5vh;
 	padding-left: 7vw;
 	padding-right: 7vw;
-}
-
-@media (min-width: 600px) {
-	.header {
-		padding-left: 23vw;
-		padding-right: 23vw;
-	}
-
-	a {
-		width: 50%;
-	}
+	margin: 0;
 }
 
 .section {
@@ -39,12 +66,14 @@ body {
 	padding-right: 5vw;
 	transition: background-color 0.3s ease;
 	border: 0px solid #fff;
-	background: linear-gradient(to top, rgba(0, 0, 0, 0.05), transparent, transparent,transparent,transparent);
-    color: #444;
+	background: 
+		rgba(51, 59, 81, 0.2)
+		linear-gradient(to top, rgba(34, 39, 54, 0.1), transparent, transparent,transparent,transparent);
+    color: #ddd;
 }
 
 .section:hover {
-	background-color: #eef;
+	background-color: rgba(34, 39, 54, 0.5);
 }
 
 h1 {
@@ -67,6 +96,8 @@ img {
   max-width: 100%;
   display: block;
   padding-top: 2%;
+  padding-bottom: 2%;
+  margin:auto;
 }
 
 a {
@@ -76,3 +107,13 @@ a {
 	margin: 0 auto;
 }
 
+@media (min-width: 600px) {
+	header, .top {
+		padding-left: 23vw;
+		padding-right: 23vw;
+	}
+
+	a {
+		width: 50%;
+	}
+}
