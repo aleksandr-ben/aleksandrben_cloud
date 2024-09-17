@@ -1,3 +1,7 @@
+html, body {
+	height: 100%;
+}
+
 body {
  	padding: 0;
 	margin: 0;
@@ -6,18 +10,22 @@ body {
 	background-image: url('bg.webp');
 	background-size: cover;
 	background-attachment: fixed;
-	background-position: center;
+	background-position: center top;
+
+	  display: flex;
+  flex-direction: column;
 }
 
 main {
 	background: rgba(34, 39, 54, 0.5);
+	flex:1;
 }
 
 header {
 	background-image: url('bg.webp');
 	background-size: cover;
 	background-attachment: fixed;
-	background-position: center;
+	background-position: center top;
 
 	position: sticky;
 	top: -3vh;
@@ -29,7 +37,10 @@ header {
 	transition: all 0.3s ease;
 	margin: 0;
 	z-index: 1000;
-    /* backdrop-filter: blur(3px); */
+
+	display: flex;
+  	justify-content: space-between;
+  	align-items: center;
 }
 
 header::before {
@@ -41,6 +52,35 @@ header::before {
     bottom: 0;
     background: rgba(34, 39, 54, 0.75);
     z-index: -1;
+}
+
+footer {
+	text-align: center;
+	font-size: 75%;
+	color: #ccc;
+    background: rgba(34, 39, 54, 0.75);
+}
+
+h1 {
+	padding-top: 0vh;
+	margin: 0;
+	font-size: 150%;
+}
+
+p {
+	padding-top: 0vh;
+	margin: 0;
+	font-size: 100%;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+a {		
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 
 .top {
@@ -70,23 +110,46 @@ header::before {
 	background-color: rgba(34, 39, 54, 0.5);
 }
 
-h1 {
-	padding-top: 0vh;
-	margin: 0;
-	font-size: 150%;
+a.sect {
+	margin: 0 auto;
 }
 
-p {
-	padding-top: 0vh;
-	margin: 0;
-	font-size: 100%;
+.foot {
+	padding: 0.5em;
 }
 
-.bold {
-	font-weight: bold;
+.foot:hover {
+	background: rgba(34, 39, 54, 0.5);
 }
 
-img {
+.divicons {
+	display: flex;
+
+	a {		
+		padding: 0.75em;
+	}
+}
+
+.tdicon {
+	text-align: center;
+}
+
+.tdicon:hover {
+	background: rgba(34, 39, 54, 0.2);
+}
+
+.icon {
+	width: 1.5em;
+    display: block;
+    margin:auto;
+}
+
+.icontext {
+	display: none;
+	padding: 0;
+}
+
+.img {
   max-width: 100%;
   display: block;
   padding-top: 2%;
@@ -94,20 +157,22 @@ img {
   margin:auto;
 }
 
-a {
-	display: block; 
-	text-decoration: none; 
-	color: inherit;
-	margin: 0 auto;
-}
-
-@media (min-width: 600px) {
+@media (min-width: 602px) {
 	header, .top {
-		padding-left: 23vw;
-		padding-right: 23vw;
+		padding-left: 17vw;
+		padding-right: 17vw;
 	}
 
-	a {
+	a.sect {
 		width: 50%;
+	}
+
+	.icontext {
+		display: initial;
+		font-size: 80%;
+	}
+
+	.icon {
+		width: 1em;
 	}
 }
