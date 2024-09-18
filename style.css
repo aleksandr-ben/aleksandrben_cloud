@@ -110,6 +110,10 @@ a {
 	background-color: rgba(34, 39, 54, 0.5);
 }
 
+pre, .cont, a.sect {
+	max-width: 110vmin;
+}
+
 a.sect {
 	margin: 0 auto;
 }
@@ -196,17 +200,13 @@ pre {
 
 @media (min-width: 602px) {
 	header, .top {
-		padding-left: 19vw;
-		padding-right: 19vw;
+		padding-left: max(7vw, calc((100vw - 110vmin)/2 - 7vw));
+		padding-right: max(7vw, calc((100vw - 110vmin)/2 - 7vw));
 	}
 
 	header {
 		padding-top: 0;
 		padding-bottom: 0;
-	}
-
-	pre, .cont, a.sect {
-		width: 50%;
 	}
 
 	.icontext {
