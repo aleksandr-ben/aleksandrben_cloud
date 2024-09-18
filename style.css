@@ -1,19 +1,27 @@
 html, body {
 	height: 100%;
+	padding: 0;
+	margin: 0;
 }
 
-body {
- 	padding: 0;
-	margin: 0;
-	font-family: "Helvetica", "Arial", sans-serif;
-	font-size: min(4vh, 4vw);
+body, header {	
 	background-image: url('bg.webp');
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center top;
+}
 
-	  display: flex;
-  flex-direction: column;
+@media (orientation: portrait) and (max-width: 650px) {
+	header, body {
+		background-image: url('bg_mobile.webp');
+	}
+}
+
+body {
+	display: flex;
+    flex-direction: column;
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 4vmin;
 }
 
 main {
@@ -22,11 +30,6 @@ main {
 }
 
 header {
-	background-image: url('bg.webp');
-	background-size: cover;
-	background-attachment: fixed;
-	background-position: center top;
-
 	position: sticky;
 	top: -3vh;
 	color: #FFF;
@@ -57,20 +60,17 @@ header::before {
 footer {
 	text-align: center;
 	font-size: 75%;
-	color: #ccc;
+	color: #eee;
     background: rgba(34, 39, 54, 0.75);
 }
 
-h1 {
+h1, p {
 	padding-top: 0vh;
 	margin: 0;
-	font-size: 150%;
 }
 
-p {
-	padding-top: 0vh;
-	margin: 0;
-	font-size: 100%;
+h1 {
+	font-size: 150%;
 }
 
 .bold {
