@@ -62,6 +62,13 @@ footer {
 	font-size: 75%;
 	color: #eee;
     background: rgba(34, 39, 54, 0.75);
+
+    a {
+    	padding: 0.5em;
+    }
+    a:hover {
+		background: rgba(34, 39, 54, 0.5);
+	}
 }
 
 h1, p {
@@ -94,28 +101,24 @@ a {
 }
 
 .section {
-	padding-top: 5vh;
-	padding-bottom: 5vh;
-	padding-left: 5vw;
-	padding-right: 5vw;
-	transition: background-color 0.3s ease;
-	border: 0px solid #fff;
+	margin: 0 auto;
 	background: 
 		rgba(51, 59, 81, 0.2)
 		linear-gradient(to top, rgba(34, 39, 54, 0.1), transparent, transparent,transparent,transparent);
-    color: #ddd;
+	transition: background-color 0.3s ease;
+	color: #ddd;
+
+	a {
+		padding: 5vmin;
+	}
 }
 
 .section:hover {
 	background-color: rgba(34, 39, 54, 0.5);
 }
 
-pre, .cont, a.sect {
+pre, .cont, .section {
 	max-width: 110vmin;
-}
-
-a.sect {
-	margin: 0 auto;
 }
 
 .cont {
@@ -163,13 +166,6 @@ pre {
     left: 0.5em;
 }
 
-.foot {
-	padding: 0.5em;
-}
-
-.foot:hover {
-	background: rgba(34, 39, 54, 0.5);
-}
 
 .divicons {
 	display: flex;
