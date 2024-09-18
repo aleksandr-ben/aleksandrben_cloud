@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <title>Portfolio website | Aleksandr Ben</title>
   <link rel="canonical" href="https://aleksandrben.cloud/self">
   <link href="style.css" rel="stylesheet" />
@@ -43,7 +43,49 @@
         Page in progress..
       </p>
     </div>
-    <img src="https://github.com/alexben16/aleksandrben_cloud/actions/workflows/aws.yml/badge.svg" alt="Status of CI/CD pipeline">
+
+    <div class="cont">
+      <img src="https://github.com/alexben16/aleksandrben_cloud/actions/workflows/aws.yml/badge.svg" alt="Status of CI/CD pipeline" class="workflow_badge">
+
+
+    </div>
+
+    <pre class="self-yaml"><code>
+
+
+name: Pipeline to AWS S3
+
+on: 
+  push:
+    branches: 
+      - main
+
+jobs:
+  deploy:
+    name: CI/CD pipeline
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Git clone
+      uses: actions/checkout@v1
+
+    - name: Get AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with: 
+        aws-access-key-id     : ${{ secrets.AWS_ACCESS_KEY }}
+        aws-secret-access-key : ${{ secrets.AWS_SECRET_KEY }}
+        aws-region            : ${{ secrets.AWS_REGION_NAME }}
+
+    - name: Sync to AWS S3
+      run: |
+        aws s3 sync . s3://${{ secrets.AWS_BUCKET_NAME }} \
+        --delete \
+        --exclude ".git/*" \
+        --exclude ".github/*"
+
+    - name: Success log msg
+      run: echo "Successfully deployed to AWS S3 Bucket"
+    </code></pre>
   </main>
 
   <footer>

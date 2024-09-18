@@ -11,7 +11,7 @@ body, header {
 	background-position: center top;
 }
 
-@media (orientation: portrait) and (max-width: 650px) {
+@media (orientation: portrait) and (max-width: 601px) {
 	header, body {
 		background-image: url('bg_mobile.webp');
 	}
@@ -21,7 +21,7 @@ body {
 	display: flex;
     flex-direction: column;
 	font-family: "Helvetica", "Arial", sans-serif;
-	font-size: 4vmin;
+	font-size: min(4vw, 3vh);
 }
 
 main {
@@ -31,9 +31,9 @@ main {
 
 header {
 	position: sticky;
-	top: -3vh;
+	top: 0;
 	color: #FFF;
-	padding-top: 5vh;
+	padding-top: 2vh;
 	padding-bottom: 2vh;
 	padding-left: 7vw;
 	padding-right: 7vw;
@@ -114,6 +114,51 @@ a.sect {
 	margin: 0 auto;
 }
 
+.cont {
+	margin: auto;
+}
+
+.workflow_badge {
+	max-width: 100%;
+	height: 1.25em;
+	display: block;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	margin:auto;
+}
+
+pre {
+    background-color: rgba(50, 60, 70, 0.8);
+    position: relative;
+    margin: auto;
+    overflow-x: auto;
+    padding: 15px;
+    font-size: 80%;
+    color: #eee;
+}
+
+.self-yaml::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2.5em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(34, 38, 54, 0.8);
+}
+
+.self-yaml::after {
+    content: '.github/workflows/aws.yml';
+	font-style: italic;
+    font-size: 110%;
+    color: #DDD; 
+    position: absolute;
+    padding: 0.5em;
+    top: 0;
+    left: 0.5em;
+}
+
 .foot {
 	padding: 0.5em;
 }
@@ -149,30 +194,23 @@ a.sect {
 	padding: 0;
 }
 
-.img {
-  max-width: 100%;
-  display: block;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  margin:auto;
-}
-
 @media (min-width: 602px) {
 	header, .top {
-		padding-left: 17vw;
-		padding-right: 17vw;
+		padding-left: 19vw;
+		padding-right: 19vw;
 	}
 
-	a.sect {
+	header {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	pre, .cont, a.sect {
 		width: 50%;
 	}
 
 	.icontext {
 		display: initial;
 		font-size: 80%;
-	}
-
-	.icon {
-		width: 1em;
 	}
 }
