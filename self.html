@@ -3,16 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <title>Portfolio website | Aleksandr Ben</title>
-  <meta name="description" content="Project: Personal portfolio website">
+  <title>Project: Personal portfolio website | Aleksandr Ben</title>
+  <meta name="description" content="Essentials: Build a modern, responsive, lightweight website that stays highly available and secure using minimalistic technology.">
   <link rel="canonical" href="https://aleksandrben.cloud/self">
-  <link href="style.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet">
 
-  <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="icon" href="favicon.svg" sizes="any" type="image/svg+xml">
+  <link rel="icon" href="favicon.png" sizes="32x32" type="image/png">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#222736">
 
 </head>
 <body>
@@ -47,12 +45,46 @@
   <main>
     <div class="top">
       <p>
-        Page in progress..
+        Project essentials:
+        <br><br>
+        Build a modern, responsive, lightweight website that stays highly available and secure using minimalistic technology.
       </p>
     </div>
 
     <div class="cont">
-      <img src="https://github.com/alexben16/aleksandrben_cloud/actions/workflows/aws.yml/badge.svg" alt="Status of CI/CD pipeline" class="workflow_badge">
+      <p> 
+        To solve this task, several key decisions were made:
+        <ol>
+          <li>Pages are written in pure HTML5/CSS3 to maintain simplicity and be lightweight.</li>
+          <li>Layout appearance depends on screen size to ensure proper painting on different devices.</li>
+          <li>As the website provides static content only, Amazon Simple Storage Service (AWS S3) was chosen for its cost-effectiveness, high availability, and durability.</li>
+          <li>For security compliance, as well as for loading improvement, CDN Cloudflare was selected as the provider of SSL certificate and caching layer as well.</li>
+          <li>Git and GitHub Actions were used for version control and CI/CD.</li>
+        </ol>
+      </p>
+      <br>
+      <p>
+        The development process is iterative, with small changes and improvements actively tested. Each update that successfully passes local tests is pushed to the main branch, triggering GitHub Actions. GitHub Actions securely connects to the AWS infrastructure and deploys updates to S3 Bucket, so updates immediately become available to the end user. After deployment, testing continues on real devices, feedback is provided to the developer and all issues are immediately plugged into the planning process.
+      </p>
+      <br>
+      <p>
+        In the development process, I was guided by DevOps best practices:
+        <ul>
+          <li>Small batches, short production cycle. </li>
+          <li>Testing as part of the development routine. </li>
+          <li>Continuous Integration / Continuous Deployment. </li>
+        </ul>
+      </p>
+      <br>
+      <p>
+        This approach increases the speed of development and enhances product quality. Such an environment keeps doors open for experimenting, because of version control and automated integration/deployment. In case the update doesn't perform well in real tests, there is an easy way to roll back to the last stable version in just a few seconds.
+      </p>
+      <br>
+      <p>
+        Below you can see the YAML configuration for GitHub Actions and the result of the last deployment as well. Keeping security in mind, all sensitive data are hidden in GitHub Secrets. For secure access, AWS provides users with secret keys, which can be rotated on demand.
+
+        <img src="https://github.com/alexben16/aleksandrben_cloud/actions/workflows/aws.yml/badge.svg" alt="Status of CI/CD pipeline" class="workflow_badge">
+      </p>
     </div>
 
     <pre class="self-yaml"><code>
