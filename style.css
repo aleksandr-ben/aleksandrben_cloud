@@ -1,12 +1,17 @@
+html {
+	font-size: min(4vw, 3vh);
+	letter-spacing: 0.015em;
+	-webkit-text-size-adjust: none;
+}
+
 html, body {
 	height: 100%;
 	padding: 0;
 	margin: 0;
 	overflow-y: auto;
-	letter-spacing: 0.015em;
 }
 
-body, header {	
+html, header {	
 	background-image: url('bg.webp');
 	background-size: cover;
 	background-attachment: fixed;
@@ -14,8 +19,14 @@ body, header {
 }
 
 @media (orientation: portrait) and (max-width: 601px) {
-	header, body {
+	html, header {
 		background-image: url('bg_mobile.webp');
+	}
+}
+
+@media (min-width: 1399px) {
+	html {		
+		font-size: 20px;
 	}
 }
 
@@ -23,7 +34,6 @@ body {
 	display: flex;
     flex-direction: column;
 	font-family: "Helvetica", "Arial", sans-serif;
-	font-size: min(4vw, 3vh);
 }
 
 main {
