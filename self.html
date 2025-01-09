@@ -49,7 +49,6 @@
     </div>
 
     <div class="cont">
-      <p> 
         To solve this task, several key decisions were made:
         <ol>
           <li>Pages are written in pure HTML5/CSS3 to maintain simplicity and be lightweight.</li>
@@ -58,7 +57,6 @@
           <li>For security compliance, as well as for loading improvement, CDN Cloudflare was selected as the provider of SSL certificate and caching layer as well.</li>
           <li>Git and GitHub Actions were used for version control and CI/CD.</li>
         </ol>
-      </p>
       <br>
       <hr>
       <br>
@@ -67,14 +65,12 @@
         The development process is iterative, with small changes and improvements actively tested. Each update that successfully passes local tests is pushed to the main branch, triggering GitHub Actions. GitHub Actions securely connects to the AWS infrastructure and deploys updates to S3 Bucket, so updates immediately become available to the end user. After deployment, testing continues on real devices, feedback is provided to the developer and all issues are immediately plugged into the planning process.
       </p>
       <br>
-      <p>
         In the development process, I was guided by DevOps best practices:
         <ul>
           <li>Small batches, short production cycle. </li>
           <li>Testing as part of the development routine. </li>
           <li>Continuous Integration / Continuous Deployment. </li>
         </ul>
-      </p>
       <br>
       <p>
         This approach increases the speed of development and enhances product quality. Such an environment keeps doors open for experimenting, because of version control and automated integration/deployment. In case the update doesn't perform well in real tests, there is an easy way to roll back to the last stable version in just a few seconds.

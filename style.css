@@ -37,7 +37,7 @@ body {
 }
 
 main {
-	background: rgba(34, 39, 54, 0.5);
+	background: rgba(34, 39, 54, 0.6);
 	flex:1;
 }
 
@@ -64,7 +64,7 @@ header::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(34, 39, 54, 0.75);
+    background: rgba(34, 39, 54, 0.8);
     z-index: -1;
 }
 
@@ -72,7 +72,7 @@ footer {
 	text-align: center;
 	font-size: 75%;
 	color: #eee;
-    background: rgba(34, 39, 54, 0.75);
+    background: rgba(34, 39, 54, 0.8);
 
     a {
     	padding: 0.5em;
@@ -118,15 +118,21 @@ a {
 	margin: 0;
 }
 
+pre, .cont, .section {
+	max-width: 110vmin;
+	margin: auto;
+}
+
 .section {
 	background: 
-		rgba(51, 59, 81, 0.2)
-		linear-gradient(to top, rgba(34, 39, 54, 0.1), transparent, transparent,transparent,transparent);
+		/* rgba(51, 59, 81, 0.25) */
+		rgba(91, 99, 121, 0.25)
+		linear-gradient(to top, rgba(44, 49, 64, 0.25), transparent,transparent,transparent);
 	transition: background-color 0.3s ease;
-	color: #ddd;
-
 	a {
-		padding: 5vmin;
+		padding: 4vmin;
+		padding-left: 6vmin;
+		text-indent: -3vmin;
 	}
 }
 
@@ -134,13 +140,8 @@ a {
 	background-color: rgba(34, 39, 54, 0.5);
 }
 
-pre, .cont, .section {
-	max-width: 110vmin;
-	margin: auto;
-}
-
 .cont {
-    background-color: rgba(50, 60, 70, 0.2);
+    background-color: rgba(50, 60, 70, 0.6);
 	text-align: justify;
 	color: #FFF;
 	padding: 5vmin;
@@ -149,13 +150,17 @@ pre, .cont, .section {
 		text-indent: 2em;
 	}
 
+	.bold {
+		text-indent: 0;
+	}
+
 	ol, ul {
 		margin-bottom: 0;
 		margin-top: 0.75em;
 		padding-left: 5vmin;
 
 		li {
-			padding-bottom: 0.25em;
+			padding-bottom: 0.5em;
 		}
 	}
 
@@ -177,7 +182,27 @@ pre, .cont, .section {
 	display: block;
 	margin:auto;
 	margin-top: 5vmin;
+	width: auto;
+	height: auto;
 }
+
+.cert {
+	max-width: 30%;
+	margin:auto;
+	margin-top: 5vmin;
+	width: auto;
+	height: auto;
+}
+
+.cert_badges {
+	display: inline-block;
+	text-align: center;
+}
+
+.a_cert {
+	display: unset;
+}
+
 
 pre {
     background-color: rgba(50, 60, 70, 0.8);
