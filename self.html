@@ -42,10 +42,9 @@
 
   <main>
     <div class="top">
-      <p>
-        Project essentials:
-        <br><br>
-        Build a modern, responsive, lightweight website that stays highly available and secure using minimalistic technology.
+      <p class = "bold">
+        Task:
+        Build a modern, responsive and lightweight website using minimalistic technology.
       </p>
     </div>
 
@@ -61,6 +60,9 @@
         </ol>
       </p>
       <br>
+      <hr>
+      <br>
+
       <p>
         The development process is iterative, with small changes and improvements actively tested. Each update that successfully passes local tests is pushed to the main branch, triggering GitHub Actions. GitHub Actions securely connects to the AWS infrastructure and deploys updates to S3 Bucket, so updates immediately become available to the end user. After deployment, testing continues on real devices, feedback is provided to the developer and all issues are immediately plugged into the planning process.
       </p>
@@ -78,6 +80,9 @@
         This approach increases the speed of development and enhances product quality. Such an environment keeps doors open for experimenting, because of version control and automated integration/deployment. In case the update doesn't perform well in real tests, there is an easy way to roll back to the last stable version in just a few seconds.
       </p>
       <br>
+      <hr>
+      <br>
+
       <p>
         Below you can see the YAML configuration for GitHub Actions and the result of the last deployment as well. Keeping security in mind, all sensitive data are hidden in GitHub Secrets. For secure access, AWS provides users with secret keys, which can be rotated on demand.
 
@@ -125,7 +130,7 @@ jobs:
 
   <footer>
     <a href="https://aleksandrben.cloud">
-      Cloud © 2024
+      Cloud © 2025
     </a>
   </footer>
 </body>
