@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <title>Project: End-to-end DevOps pipeline | Aleksandr Ben"</title>
+  <meta name="description" content="This project demonstrates practical implementation of modern DevOps principles">
+  <link rel="canonical" href="https://aleksandrben.cloud/pipeline">
+  <link href="/style.css" rel="stylesheet">
+  <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml">
+  <link rel="icon" href="/favicon.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <div class="title">
+      <h1>
+        Project: End-to-end DevOps pipeline
+      </h1>
+    </div>
+
+    <div class="divicons">
+      <div class="tdicon">
+        <a href="https://www.linkedin.com/in/aleksandr-ben/">
+          <img src="linkedin_logo.svg" alt="LinkedIn logo" class="icon">
+          <p class = "icontext">
+            LinkedIn
+          </p> 
+        </a> 
+      </div>
+
+      <div class="tdicon">
+        <a href="https://github.com/aleksandr-ben">
+          <img src="github_logo.svg" alt="GitHub logo" class="icon">
+          <p class = "icontext">
+            GitHub
+          </p> 
+        </a> 
+      </div>
+    </div>   
+  </header>
+
+  <main>
+    <div class="top">
+      <p class = "bold">
+        Task: Design an automated solution for infrastructure provisioning, application deployment, and monitoring.
+      </p>
+    </div>
+
+    <div class="cont">
+      <p> 
+        This project demonstrates practical implementation of modern DevOps principles, showcasing a comprehensive workflow from cloud infrastructure provisioning to application deployment and real-time monitoring. It incorporates industry-standard tools and best practices to build an automated, scalable cloud-native environment designed to enhance operational efficiency and system reliability.
+      </p>
+
+      <br>
+      <hr>
+      <br>
+
+      <p class = "bold">Technology stack</p>
+      <ul>
+        <li>AWS: Cloud infrastructure provider</li>
+        <li>Terraform: Infrastructure as Code (IaC)</li>
+        <li>Helm: Kubernetes deployment management</li>
+        <li>GitHub Actions: CI/CD automation</li>
+        <li>Prometheus & Grafana: Monitoring & visualization</li>
+      </ul>
+
+      <br>
+      <hr>
+      <br>
+
+      <p> 
+        <p class = "bold">Cloud-Native DevOps Pipeline</p>
+        <img src="/DevOpsTools.png" alt="DevOps pipeline: Terraform on AWS, Helm for Kubernetes, CI/CD with GitHub Actions, Docker, ECR, and monitoring via Prometheus & Grafana." class="diagram"> 
+      </p>
+
+      <br>
+      <hr>
+      <br>
+
+      <div class = "section"> 
+        <a href="https://github.com/aleksandr-ben/DevOpsToolsShowoff">
+          &rarrhk; GitHub repository of the project
+        </a>
+      </div>
+
+      <br>
+      <hr>
+      <br>
+
+      <p> 
+        <p class = "bold">Best practices followed</p>
+        <ol>
+          <li>
+            Containerization for environment consistency
+            <ul>
+              <li>Docker-based containers ensure identical environments across development, testing, and production stages.</li>
+              <li>Impact: Eliminates inconsistencies across environments and simplifies cross-stage deployment.</li>
+            </ul>
+          </li>
+
+          <li>
+            Proactive monitoring with Prometheus and Grafana
+            <ul>
+              <li>Prometheus collects system and application metrics; Grafana enables real-time dashboard visualization.</li>
+              <li>Outcome: Early issue detection, performance optimization, and improved system resilience.</li>
+            </ul>
+          </li>
+
+          <li>
+            Separation of infrastructure and application logic
+            <ul>
+              <li>Infrastructure provisioning (Terraform) and application deployment logic (Helm charts) are maintained in isolated codebases.</li>
+              <li>Advantages: Supports modular updates, minimizes interdependencies, and enables independent management of infrastructure and application lifecycles.</li>
+            </ul>
+          </li>
+
+          <li>
+            Scalable architecture with horizontal scaling
+            <ul>
+              <li>Kubernetes auto-scaling and cloud-native resources enable the application to scale horizontally based on demand.</li>
+              <li>Impact: Optimal resource utilization and consistent performance under variable workloads.</li>
+            </ul>
+          </li>
+
+          <li>
+            Version control for infrastructure and application code
+            <ul>
+              <li>All Terraform configurations, Helm charts, and application code are versioned in GitHub using Git.</li>
+              <li>Benefits: Enables precise tracking of changes, fosters team collaboration, and provides instant rollback capabilities to stable states.</li>
+            </ul>
+          </li>
+        </ol>
+      </p>
+      <br>
+      <hr>
+      <br>
+
+      <p> 
+        <p class = "bold">Areas for improvement</p>
+        <ul>
+          <li>
+            <p class = "bold">Automated testing for Kubernetes configurations</p>
+          </li>
+            Introducing automated testing for Kubernetes configurations validates Helm charts early in the development cycle, ensuring reliable, error-free deployments.
+          <br><br>
+
+          <li>
+            <p class = "bold">Enhanced security practices</p>
+          </li>
+            Strengthening security through fine-grained IAM roles, encrypted secret management (e.g., AWS Secrets Manager), and strict access controls reduces security risks and enhances system integrity.
+          <br><br>
+
+          <li>
+            <p class = "bold">Automated rollbacks and safe deployments</p>
+          </li>
+            Implementing rollback mechanisms in the CI/CD pipeline ensures rapid recovery from failed deployments, minimizes downtime, and reduces manual intervention.
+        </ul>
+      </p>
+      <br>
+
+  </main>
+
+  <footer>
+    <a href="https://aleksandrben.cloud">
+      Cloud © 2025
+    </a>
+  </footer>
+</body>
+</html>

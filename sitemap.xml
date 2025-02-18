@@ -8,7 +8,7 @@
 
 <url>
   <loc>https://aleksandrben.cloud/</loc>
-  <lastmod>2025-01-10T00:00:00+00:00</lastmod>
+  <lastmod>2025-02-18T00:00:00+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
@@ -19,6 +19,11 @@
 <url>
   <loc>https://aleksandrben.cloud/serverless</loc>
   <lastmod>2025-01-10T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aleksandrben.cloud/pipeline</loc>
+  <lastmod>2025-01-18T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
